@@ -1,0 +1,52 @@
+var express = require('express');
+var http = require('http');
+var ejs = require('ejs');
+var app = express();
+
+
+
+// all environments
+app.set('port', process.env.PORT || 4000);
+
+// Häälesta vaadete süsteem.
+// Kasuta EJS-i.
+
+app.set('views', __dirname + '/views');
+app.engine('html', ejs.renderFile);
+
+
+ejs.open = '{{';
+ejs.close = '}}';
+
+//Häälesta middleware
+	// annab expressi faviconi
+ app.use(express.favicon());	
+ app.use(express.json()); 
+ app.use(express.urlencoded());
+	//http://stackoverflow.com/questions/12695591/node-js-express-js-how-does-app-router-work
+ app.use(app.router); 
+	//jagab tavalisi faile public kaustast
+ app.use(express.static('public'));
+
+
+app.get('/', function(req, res) {
+	//moodul kus on eraldi funktsioon andmete andmebaasist võtmiseks
+	data.getData(request, dataUrl, function data(err, body){
+		if (err) {
+			// Error
+			console.error(err);
+			res.send(500);
+		} else {
+				res.render('task.html', { 
+				data: 'data'
+			});
+		}			
+	});
+});
+
+	
+// Käivitab serveri.
+
+app.listen(app.get('port'), function(){
+	console.log('Express server listening on port ' + app.get('port'));
+});

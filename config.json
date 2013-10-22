@@ -1,0 +1,3 @@
+{
+	"data": "http://88.196.48.87:8888/solr/select?q=*%3A*&rows=20&wt=json&indent=true",
+} 
