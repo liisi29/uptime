@@ -2,6 +2,7 @@ var express = require('express');
 var http = require('http');
 var ejs = require('ejs');
 var app = express();
+var data = require('./lib/data');
 
 
 
@@ -13,7 +14,6 @@ app.set('port', process.env.PORT || 4000);
 
 app.set('views', __dirname + '/views');
 app.engine('html', ejs.renderFile);
-
 
 ejs.open = '{{';
 ejs.close = '}}';
@@ -29,20 +29,21 @@ ejs.close = '}}';
  app.use(express.static('public'));
 
 
+
 app.get('/', function(req, res) {
 	//moodul kus on eraldi funktsioon andmete andmebaasist võtmiseks
-	data.getData(request, dataUrl, function data(err, body){
-		if (err) {
-			// Error
-			console.error(err);
-			res.send(500);
-		} else {
-				res.render('task.html', { 
-				data: 'data'
-			});
-		}			
+	// funktsiooni v2lja kutsumine (defineeritakse public.js-s)
+	data.getData(data.data, function(cd){
+		res.render('task.html', { 
+			newest: cd.newest, 
+			marketing: cd.marketing,
+			cloud: cd.cloud, 
+			technology: cd.technology, 
+			gadget: cd.gadget  
+		});
 	});
 });
+
 
 	
 // Käivitab serveri.
