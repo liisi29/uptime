@@ -33,8 +33,18 @@ ejs.close = '}}';
 app.get('/', function(req, res) {
 	//moodul kus on eraldi funktsioon andmete andmebaasist võtmiseks
 	// funktsiooni v2lja kutsumine (defineeritakse public.js-s)
-	data.getData(data.data, function(cd){
+/*	data.getData(data.data, function(cd){
 		res.render('task.html', { 
+			newest: cd.newest, 
+			marketing: cd.marketing,
+			cloud: cd.cloud, 
+			technology: cd.technology, 
+			gadget: cd.gadget  
+		});
+	});
+*/
+	data.getData(data.data, function(cd){
+		res.send('data.js', { 
 			newest: cd.newest, 
 			marketing: cd.marketing,
 			cloud: cd.cloud, 
