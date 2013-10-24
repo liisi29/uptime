@@ -15,8 +15,8 @@ app.set('port', process.env.PORT || 4000);
 app.set('views', __dirname + '/views');
 app.engine('html', ejs.renderFile);
 
-ejs.open = '{{';
-ejs.close = '}}';
+ejs.open = '<ejs>';
+ejs.close = '</ejs>';
 
 //Häälesta middleware
 	// annab expressi faviconi
@@ -28,46 +28,25 @@ ejs.close = '}}';
 	//jagab tavalisi faile public kaustast
  app.use(express.static('public'));
 
-
-
 app.get('/', function(req, res) {
-	data.getData(function(err, newest){
+	data.getData(function(err, newest, marketing, cloud, technology, gadget){
 		if (err) {
 			console.error(new Date() + ' ' + err);
 			// FIXME Saada üldisele vealehele.
 			res.send(500);
 		} else {
-			//res.render('task.html', { 
+			res.render('task.html', {
+				newest: newest, 
+				marketing: marketing, 
+				cloud: cloud, 
+				technology: technology, 
+				gadget: gadget
+			}); 
 			
-		//	});
 		}
 	});
 });
-	//moodul kus on eraldi funktsioon andmete andmebaasist võtmiseks
-	// funktsiooni v2lja kutsumine (defineeritakse public.js-s)
-/*	data.getData(data.data, function(cd){
-		res.render('task.html', { 
-			newest: cd.newest, 
-			marketing: cd.marketing,
-			cloud: cd.cloud, 
-			technology: cd.technology, 
-			gadget: cd.gadget  
-		});
-	});
 
-	data.getData(data.data, function(cb){
-		res.render('task.html', { 
-			newest: cb.newest, 
-			marketing: cb.marketing,
-			cloud: cb.cloud, 
-			technology: cb.technology, 
-			gadget: cb.gadget  
-		});
-	});*/
-
-
-
-	
 // Käivitab serveri.
 
 app.listen(app.get('port'), function(){
