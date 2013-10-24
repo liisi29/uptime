@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width">
 	<title>Foundation 4</title>
 	<link rel="stylesheet" href="../css/foundation.css">
+	<link rel="stylesheet" href="../css/override.css">
 	<script src="js/vendor/custom.modernizr.js"></script>
 	<script>
 		var newest = 	'<ejs>= newest </ejs>';
@@ -19,7 +20,7 @@
 
 </head>
 <body>
-	<div class="row">
+	<div class="row panel">
 		<div class="large-12 columns">
 			<h2>Last news</h2>
 		</div>
@@ -27,21 +28,38 @@
 			<div class="row"><p>Nothing to show</p></div>
 		<ejs> } else { </ejs> 
 			<ejs> for (var x = 0; x < newest.length; x++){ </ejs>
-			
-				<div class="row"><p><ejs>=newest[x].date</ejs></p></div>
-				<div class="row"><p><ejs>=newest[x].title</ejs></p></div>
-				<div class="row"><p><ejs>=newest[x].description</ejs></p></div>
-				<div class="row"><p><a href="<ejs>=newest[x].link</ejs>">Read more</a></p></div>
-				<div class="row"><p><a href="<ejs>=newest[x].link</ejs>#comments"><ejs>=newest[x]['slash-comments']</ejs></a></p></div>
-				<div class="row"><p><ejs>=newest[x].author</ejs></p></div>
-				<div class="row"><p>
-					<ejs> for(var y = 0; y < newest[x].category.length; y++) { </ejs>
-							<ejs>=newest[x].category[y]</ejs>, 
-					<ejs> }	</ejs>
-				</p></div>
-			
+				<div class="row">
+					<div class="large-2 columns">
+						<p><ejs>=newest[x].date</ejs></p>
+					</div>
+					<div class="large-3 columns">
+					</div>
+					<div class="large-7 columns">
+					<h4><ejs>=newest[x].title</ejs></h4>
+					<p><ejs>=newest[x].description</ejs></p>
+					<p><a href="<ejs>=newest[x].link</ejs>">Read more</a></p>
+					
+						<p>
+							Comments: <a href="<ejs>=newest[x].link</ejs>#comments"><ejs>=newest[x]['slash-comments']</ejs></a> | 
+							Author: <ejs>=newest[x].author</ejs> |
+							<ejs>if(newest[x].category.length > 1){</ejs>
+								Categories: 
+							<ejs> } else { </ejs>
+								Category:
+							<ejs> } </ejs>
+							<ejs> for(var y = 0; y < newest[x].category.length; y++) { </ejs>
+								<a href="http://slashdot.org/tag/<ejs>=newest[x].category[y]</ejs>">
+								<ejs>=newest[x].category[y]</ejs></a>
+								<ejs>if(y < newest[x].category.length - 1){</ejs>
+								 , 
+								<ejs>}</ejs>
+							<ejs> }	</ejs>
+						</p>
+					</div>
+				</div>
 			<ejs> } </ejs>	
 		<ejs> } </ejs> 
+				
 	</div>
 	<hr />
 	
