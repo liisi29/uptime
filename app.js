@@ -31,6 +31,18 @@ ejs.close = '}}';
 
 
 app.get('/', function(req, res) {
+	data.getData(function(err, newest){
+		if (err) {
+			console.error(new Date() + ' ' + err);
+			// FIXME Saada üldisele vealehele.
+			res.send(500);
+		} else {
+			//res.render('task.html', { 
+			
+		//	});
+		}
+	});
+});
 	//moodul kus on eraldi funktsioon andmete andmebaasist võtmiseks
 	// funktsiooni v2lja kutsumine (defineeritakse public.js-s)
 /*	data.getData(data.data, function(cd){
@@ -42,17 +54,17 @@ app.get('/', function(req, res) {
 			gadget: cd.gadget  
 		});
 	});
-*/
-	data.getData(data.data, function(cd){
-		res.send('data.js', { 
-			newest: cd.newest, 
-			marketing: cd.marketing,
-			cloud: cd.cloud, 
-			technology: cd.technology, 
-			gadget: cd.gadget  
+
+	data.getData(data.data, function(cb){
+		res.render('task.html', { 
+			newest: cb.newest, 
+			marketing: cb.marketing,
+			cloud: cb.cloud, 
+			technology: cb.technology, 
+			gadget: cb.gadget  
 		});
-	});
-});
+	});*/
+
 
 
 	

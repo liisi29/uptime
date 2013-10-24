@@ -10,10 +10,7 @@
 	<script src="js/vendor/custom.modernizr.js"></script>
 	<script>
 		var newest = 	'{{= newest }}';
-		
-		console.log(newest);
 		var marketing = '{{= marketing }}';
-		console.log(marketing);
 		var cloud = 	'{{= cloud }}';
 		var technology = '{{= technology }}';
 		var gadget = 	'{{= gadget }}';
@@ -44,24 +41,56 @@
 	<div class="row">
 		<div class="large-4 columns">			
 			<h3>Marketing kategooria</h3>
-				<p> jjj</p>
+			<div class="row">
+				<p>{{= marketing[0].description }}</p> 
+			</div>
+			<div class="row">
+				<p>{{= marketing[1].description }}</p> 
+			</div>
+			<div class="row">
+				<p>{{= marketing[2].description }}</p> 
+			</div>
 			<hr />
 		</div>
 		<div class="large-4 columns">			
 			<h3> Cloud kategooria</h3>
-			<p> Cloud kategooria</p>
+			<div class="row">
+				<p>{{= cloud[0].description }}</p> 
+			</div>
+			<div class="row">
+				<p>{{= cloud[1].description }}</p> 
+			</div>
+			<div class="row">
+				<p>{{= cloud[2].description }}</p> 
+			</div>
 			<hr />
 		</div>
 	</div>
 	<div class="row">
 		<div class="large-4 columns">			
-			<h4>Technology kategooria</h4>		
-			<p>Technology kategooria</p>			
+			<h4>Technology kategooria</h4>	
+			<div class="row">
+				<p>{{= technology[0].description }}</p> 
+			</div>
+			<div class="row">
+				<p>{{= technology[1].description }}</p> 
+			</div>
+			<div class="row">
+				<p>{{= technology[2].description }}</p> 
+			</div>		
 			<hr />
 		</div>
 		<div class="large-4 columns">			
-			<h4> Gadget kategooria</h4>			
-			<p> Gadget kategooria</p>
+			<h4> Gadget kategooria</h4>	
+			<div class="row">
+				<p>{{= gadget[0].description }}</p> 
+			</div>
+			<div class="row">
+				<p>{{= gadget[1].description }}</p> 
+			</div>
+			<div class="row">
+				<p>{{= gadget[2].description }}</p> 
+			</div>
 			<hr />
 		</div>
 	</div>

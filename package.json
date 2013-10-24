@@ -5,6 +5,7 @@
     "dependencies": {
 		"express": "3.4.2",
         "ejs": "*",
-        "commander": "*"
+        "commander": "*",
+        "async": "*"
     }
 }
