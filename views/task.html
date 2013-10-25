@@ -20,49 +20,204 @@
 
 </head>
 <body>
-	<div class="row panel">
-		<div class="large-12 columns">
-			<h2>Last news</h2>
-		</div>
-		<ejs> if (newest.length === 0) { </ejs>
-			<div class="row"><p>Nothing to show</p></div>
-		<ejs> } else { </ejs> 
-			<ejs> for (var x = 0; x < newest.length; x++){ </ejs>
+
+	<!-- First row -->
+	<div class="row">
+		<div class="large-12 columns">			
+			<div class="panel">
+				<h2>Last news</h2>
 				<div class="row">
-					<div class="large-2 columns">
-						<p><ejs>=newest[x].date</ejs></p>
-					</div>
-					<div class="large-3 columns">
-					<img src="http://a.fsdn.com/sd/topics/<ejs>=newest[x].category[0]</ejs>_64.png" onerror="this.src='../img/slashdot_64.png'"/></p>
-					</div>
-					<div class="large-7 columns">
-					<h4><ejs>=newest[x].title</ejs></h4>
-					<p><ejs>=newest[x].description</ejs></p>
-					<p><a href="<ejs>=newest[x].link</ejs>">Read more</a></p>
-					
-						<p>
-							Comments: <a href="<ejs>=newest[x].link</ejs>#comments"><ejs>=newest[x]['slash-comments']</ejs></a> | 
-							Author: <ejs>=newest[x].author</ejs> |
-							<ejs>if(newest[x].category.length > 1){</ejs>
-								Categories: 
-							<ejs> } else { </ejs>
-								Category:
-							<ejs> } </ejs>
-							<ejs> for(var y = 0; y < newest[x].category.length; y++) { </ejs>
-								<a href="http://slashdot.org/tag/<ejs>=newest[x].category[y]</ejs>">
-								<ejs>=newest[x].category[y]</ejs></a>
-								<ejs>if(y < newest[x].category.length - 1){</ejs>
-								 , 
-								<ejs>}</ejs>
-							<ejs> }	</ejs>
-						</p>
-					</div>
+					<ejs> if (newest.length === 0) { </ejs>
+						<div class="large-12 columns">
+							<p>Nothing to show</p>
+						</div>
+					<ejs> } else { </ejs> 
+						<ejs> for (var x = 0; x < newest.length; x++){ </ejs>
+							
+							<div class="large-1 columns">
+								<div class="dateBox">
+									<div class="dBoxD">
+										<ejs> if (newest[x].date[0] < 10) { </ejs>
+											0<ejs>=newest[x].date[0]</ejs>
+										<ejs> } else {</ejs>
+											<ejs>=newest[x].date[0]</ejs>
+										<ejs> } </ejs>
+									</div>
+									<div class="dBoxM"><ejs>=newest[x].date[1][1]</ejs></div>
+									<div class="dBoxY"><ejs>=newest[x].date[2]</ejs></div>
+								</div>
+							</div>
+							
+							<div class="large-1 columns">
+								<img src="http://a.fsdn.com/sd/topics/<ejs>=newest[x].category[0]</ejs>_64.png" onerror="this.src='../img/slashdot_64.png'"/></p>
+							</div>
+							
+							<div class="large-10 columns">
+								<h4><ejs>=newest[x].title</ejs></h4>
+								<p>
+									<ejs>=newest[x].description</ejs>
+									<a href="<ejs>=newest[x].link</ejs>">Read more</a>
+								</p>
+								
+								<p>
+									Comments: <a href="<ejs>=newest[x].link</ejs>#comments"><ejs>=newest[x]['slash-comments']</ejs></a> | 
+									Author: <ejs>=newest[x].author</ejs> |
+									<ejs>if(newest[x].category.length > 1){</ejs>
+										Categories: 
+									<ejs> } else { </ejs>
+										Category:
+									<ejs> } </ejs>
+									<ejs> for(var y = 0; y < newest[x].category.length; y++) { </ejs>
+										<a href="http://slashdot.org/tag/<ejs>=newest[x].category[y]</ejs>">
+										<ejs>=newest[x].category[y]</ejs></a>
+										<ejs>if(y < newest[x].category.length - 1){</ejs>
+										 , 
+										<ejs>}</ejs>
+									<ejs> }	</ejs>
+								</p>
+							</div>
+						<ejs> } </ejs>	
+					<ejs> } </ejs>
 				</div>
-			<ejs> } </ejs>	
-		<ejs> } </ejs> 
-				
-	</div>
+			</div>
+		</div>		
+	</div>	
+
+	
 	<hr />
+	
+	<!-- Second row -->
+	<div class="row ">
+		<div class="large-6 columns">
+			<div class="panel">
+				<h2>Marketing</h2>
+				<p>
+					<ejs> if (marketing.length === 0) { </ejs>
+						<div class="row"><p>Nothing to show</p></div>
+					<ejs> } else { </ejs> 
+						<ejs> for (var x = 0; x < marketing.length; x++){ </ejs>
+							
+									<h4><ejs>=marketing[x].title</ejs></h4>
+									<p><ejs>=marketing[x].description</ejs></p>
+									<p><a href="<ejs>=marketing[x].link</ejs>">Read more</a></p>
+							
+							<div class="row">				
+								<div class="large-2 columns">
+									<ejs>=marketing[x].date[0]</ejs>. <ejs>=marketing[x].date[1][0]</ejs>
+								</div>
+								<div class="large-4 columns">
+									<p>
+										Comments: <a href="<ejs>=marketing[x].link</ejs>#comments"><ejs>=marketing[x]['slash-comments']</ejs></a>
+										
+									</p>
+								</div>
+							</div>
+						<ejs> } </ejs>	
+					<ejs> } </ejs> 
+				</p>
+			</div>
+		</div>	
+
+		<div class="large-6 columns">
+			<div class="panel">
+				<h2> Cloud</h2>
+			
+				<p>
+					<ejs> if (cloud.length === 0) { </ejs>
+						<div class="row"><p>Nothing to show</p></div>
+					<ejs> } else { </ejs> 
+						<ejs> for (var x = 0; x < cloud.length; x++){ </ejs>
+							
+								<h4><ejs>=cloud[x].title</ejs></h4>
+								<p><ejs>=cloud[x].description</ejs></p>
+								<p><a href="<ejs>=cloud[x].link</ejs>">Read more</a></p>
+							
+						
+							<div class="row">				
+								<div class="large-2 columns">
+									<ejs>=cloud[x].date[0]</ejs>. <ejs>=cloud[x].date[1][0]</ejs>
+								</div>
+								<div class="large-4 columns">
+									<p>
+										Comments: <a href="<ejs>=cloud[x].link</ejs>#comments"><ejs>=cloud[x]['slash-comments']</ejs></a>
+										
+									</p>
+								</div>
+							</div>
+						<ejs> } </ejs>	
+					<ejs> } </ejs> 
+				</p>
+			</div>
+		</div>
+	</div>	
+	<hr />
+	
+	<!-- Third row -->
+	<div class="row ">
+		<div class="large-6 columns">
+			<div class="panel">
+				<h2>Technology</h2>
+				
+				<p>
+					<ejs> if (technology.length === 0) { </ejs>
+						<p>Nothing to show</p>
+					<ejs> } else { </ejs> 
+						<ejs> for (var x = 0; x < technology.length; x++){ </ejs>
+							
+									<h4><ejs>=technology[x].title</ejs></h4>
+									<p><ejs>=technology[x].description</ejs></p>
+									<p><a href="<ejs>=technology[x].link</ejs>">Read more</a></p>
+								
+							
+							<div class="row">				
+								<div class="large-2 columns">
+									<ejs>=technology[x].date[0]</ejs>. <ejs>=technology[x].date[1][0]</ejs>
+								</div>
+								<div class="large-4 columns">
+									<p>
+										Comments: <a href="<ejs>=technology[x].link</ejs>#comments"><ejs>=technology[x]['slash-comments']</ejs></a>
+										
+									</p>
+								</div>
+							</div>
+						<ejs> } </ejs>	
+					<ejs> } </ejs> 
+				</p>
+			</div>
+		</div>	
+
+		<div class="large-6 columns">
+			<div class="panel">
+				<h2>Gadget</h2>
+				
+				<p>			
+					<ejs> if (gadget.length === 0) { </ejs>
+						<p>Nothing to show</p>
+					<ejs> } else { </ejs> 
+						<ejs> for (var x = 0; x < gadget.length; x++){ </ejs>
+							<div class="row">
+								<h4><ejs>=gadget[x].title</ejs></h4>
+								<p><ejs>=gadget[x].description</ejs></p>
+								<p><a href="<ejs>=gadget[x].link</ejs>">Read more</a></p>
+							
+							</div>
+							<div class="row">				
+								<div class="large-2 columns">
+									<ejs>=gadget[x].date[0]</ejs>. <ejs>=gadget[x].date[1][0]</ejs>
+								</div>
+								<div class="large-4 columns">
+									<p>
+										Comments: <a href="<ejs>=gadget[x].link</ejs>#comments"><ejs>=gadget[x]['slash-comments']</ejs></a>
+										
+									</p>
+								</div>
+							</div>
+						<ejs> } </ejs>	
+					<ejs> } </ejs>
+				</p>
+			</div>
+		</div>
+	</div>
 	
 	<script>
 	
