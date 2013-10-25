@@ -37,19 +37,19 @@
 								<div class="large-2 columns large-offset-1">
 									<div class="row">
 										<div class="large-12 small-6 columns">
-											<img src="http://a.fsdn.com/sd/topics/<ejs>=newest[x].category[0]</ejs>_64.png" onerror="this.src='../img/slashdot_64.png'"/></p>
+											<img src="http://a.fsdn.com/sd/topics/<ejs>-newest[x].category[0]</ejs>_64.png" onerror="this.src='../img/slashdot_64.png'"/></p>
 										</div>
 										<div class="large-12 small-6 columns">
 												<div class="dateBox">
 													<div class="dBoxD">
 														<ejs> if (newest[x].date[0] < 10) { </ejs>
-															0<ejs>=newest[x].date[0]</ejs>
+															0<ejs>-newest[x].date[0]</ejs>
 														<ejs> } else {</ejs>
-															<ejs>=newest[x].date[0]</ejs>
+															<ejs>-newest[x].date[0]</ejs>
 														<ejs> } </ejs>
 													</div>
-													<div class="dBoxM"><ejs>=newest[x].date[1][1]</ejs></div>
-													<div class="dBoxY"><ejs>=newest[x].date[2]</ejs></div>
+													<div class="dBoxM"><ejs>-newest[x].date[1][1]</ejs></div>
+													<div class="dBoxY"><ejs>-newest[x].date[2]</ejs></div>
 												</div>
 										</div>
 									</div>
@@ -57,16 +57,16 @@
 								</div>
 								
 								<div class="small-12 large-9 columns">
-									<h4><ejs>=newest[x].title</ejs></h4>
+									<h4><ejs>-newest[x].title</ejs></h4>
 									<p>
-										<ejs>=newest[x].description</ejs>
+										<ejs>-newest[x].description</ejs>
 										... 
 										<a href="<ejs>=newest[x].link</ejs>"> Read more</a>
 									</p>
 									
 									<p>
 										Comments: <a href="<ejs>=newest[x].link</ejs>#comments"><ejs>=newest[x]['slash-comments']</ejs></a> | 
-										Author: <ejs>=newest[x].author</ejs> |
+										Author: <ejs>-newest[x].author</ejs> |
 										<ejs>if(newest[x].category.length > 1){</ejs>
 											Categories: 
 										<ejs> } else { </ejs>
@@ -103,13 +103,13 @@
 					<ejs> } else { </ejs> 
 						<ejs> for (var x = 0; x < marketing.length; x++){ </ejs>
 							
-									<h4><ejs>=marketing[x].title</ejs></h4>
-									<p><ejs>=marketing[x].description</ejs></p>
+									<h4><ejs>-marketing[x].title</ejs></h4>
+									<p><ejs>-marketing[x].description</ejs></p>
 									<p><a href="<ejs>=marketing[x].link</ejs>">Read more</a></p>
 							
 							<div class="row">				
 								<div class="large-2 columns">
-									<ejs>=marketing[x].date[0]</ejs>. <ejs>=marketing[x].date[1][0]</ejs>
+									<ejs>=marketing[x].date[0]</ejs>. <ejs>-marketing[x].date[1][0]</ejs>
 								</div>
 								<div class="large-4 columns">
 									<p>
@@ -134,14 +134,14 @@
 					<ejs> } else { </ejs> 
 						<ejs> for (var x = 0; x < cloud.length; x++){ </ejs>
 							
-								<h4><ejs>=cloud[x].title</ejs></h4>
-								<p><ejs>=cloud[x].description</ejs></p>
+								<h4><ejs>-cloud[x].title</ejs></h4>
+								<p><ejs>-cloud[x].description</ejs></p>
 								<p><a href="<ejs>=cloud[x].link</ejs>">Read more</a></p>
 							
 						
 							<div class="row">				
 								<div class="large-2 columns">
-									<ejs>=cloud[x].date[0]</ejs>. <ejs>=cloud[x].date[1][0]</ejs>
+									<ejs>-cloud[x].date[0]</ejs>. <ejs>-cloud[x].date[1][0]</ejs>
 								</div>
 								<div class="large-4 columns">
 									<p>
@@ -170,14 +170,14 @@
 					<ejs> } else { </ejs> 
 						<ejs> for (var x = 0; x < technology.length; x++){ </ejs>
 							
-									<h4><ejs>=technology[x].title</ejs></h4>
-									<p><ejs>=technology[x].description</ejs></p>
+									<h4><ejs>-technology[x].title</ejs></h4>
+									<p><ejs>-technology[x].description</ejs></p>
 									<p><a href="<ejs>=technology[x].link</ejs>">Read more</a></p>
 								
 							
 							<div class="row">				
 								<div class="large-2 columns">
-									<ejs>=technology[x].date[0]</ejs>. <ejs>=technology[x].date[1][0]</ejs>
+									<ejs>-technology[x].date[0]</ejs>. <ejs>-technology[x].date[1][0]</ejs>
 								</div>
 								<div class="large-4 columns">
 									<p>
@@ -202,14 +202,14 @@
 					<ejs> } else { </ejs> 
 						<ejs> for (var x = 0; x < gadget.length; x++){ </ejs>
 							<div class="row">
-								<h4><ejs>=gadget[x].title</ejs></h4>
-								<p><ejs>=gadget[x].description</ejs></p>
+								<h4><ejs>-gadget[x].title</ejs></h4>
+								<p><ejs>-gadget[x].description</ejs></p>
 								<p><a href="<ejs>=gadget[x].link</ejs>">Read more</a></p>
 							
 							</div>
 							<div class="row">				
 								<div class="large-2 columns">
-									<ejs>=gadget[x].date[0]</ejs>. <ejs>=gadget[x].date[1][0]</ejs>
+									<ejs>-gadget[x].date[0]</ejs>. <ejs>-gadget[x].date[1][0]</ejs>
 								</div>
 								<div class="large-4 columns">
 									<p>
