@@ -28,35 +28,37 @@
 				<h2>Last news</h2>
 				<div class="row">
 					<ejs> if (newest.length === 0) { </ejs>
-						<div class="large-12 columns">
+						
 							<p>Nothing to show</p>
-						</div>
+						
 					<ejs> } else { </ejs> 
 						<ejs> for (var x = 0; x < newest.length; x++){ </ejs>
-							
-							<div class="large-1 columns">
-								<div class="dateBox">
-									<div class="dBoxD">
-										<ejs> if (newest[x].date[0] < 10) { </ejs>
-											0<ejs>=newest[x].date[0]</ejs>
-										<ejs> } else {</ejs>
-											<ejs>=newest[x].date[0]</ejs>
-										<ejs> } </ejs>
+							<div class="small-12 large-1 columns large-offset-1">
+									
+									<img src="http://a.fsdn.com/sd/topics/<ejs>=newest[x].category[0]</ejs>_64.png" onerror="this.src='../img/slashdot_64.png'"/></p>
+									
+									<div class="dateBox">
+										<div class="dBoxD">
+											<ejs> if (newest[x].date[0] < 10) { </ejs>
+												0<ejs>=newest[x].date[0]</ejs>
+											<ejs> } else {</ejs>
+												<ejs>=newest[x].date[0]</ejs>
+											<ejs> } </ejs>
+										</div>
+										<div class="dBoxM"><ejs>=newest[x].date[1][1]</ejs></div>
+										<div class="dBoxY"><ejs>=newest[x].date[2]</ejs></div>
 									</div>
-									<div class="dBoxM"><ejs>=newest[x].date[1][1]</ejs></div>
-									<div class="dBoxY"><ejs>=newest[x].date[2]</ejs></div>
-								</div>
+							
+								
+								
 							</div>
 							
-							<div class="large-1 columns">
-								<img src="http://a.fsdn.com/sd/topics/<ejs>=newest[x].category[0]</ejs>_64.png" onerror="this.src='../img/slashdot_64.png'"/></p>
-							</div>
-							
-							<div class="large-10 columns">
+							<div class="small-12 large-10 columns">
 								<h4><ejs>=newest[x].title</ejs></h4>
 								<p>
 									<ejs>=newest[x].description</ejs>
-									<a href="<ejs>=newest[x].link</ejs>">Read more</a>
+									... 
+									<a href="<ejs>=newest[x].link</ejs>"> Read more</a>
 								</p>
 								
 								<p>
@@ -80,7 +82,7 @@
 					<ejs> } </ejs>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</div>	
 
 	
