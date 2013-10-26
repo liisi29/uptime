@@ -1,0 +1,112 @@
+body{
+	background: url('../img/grey4.jpg');
+	background-repeat: repeat-x repeat-y;
+}
+hr {
+	border: none;
+}
+img {
+	max-width: 200px;
+	height: auto;
+	border: 1px solid #f9f9f9;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow:    1px 1px 5px 1px #e2dbe3;
+	-webkit-box-shadow: 1px 1px 5px 1px #e2dbe3;
+	box-shadow:         1px 1px 5px 1px #e2dbe3;
+  
+}
+h2.field{
+	background-color: #453748;
+	color: #e2dbe3;
+	padding: 10px;
+	text-transform: uppercase;
+	font-size: 20px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+.panel{
+	background-color: #fff;
+	border: 1px solid #f9f9f9;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow:    1px 1px 5px 1px #e2dbe3;
+	-webkit-box-shadow: 1px 1px 5px 1px #e2dbe3;
+	box-shadow:         1px 1px 5px 1px #e2dbe3;
+}	
+.dBoxBack{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	width: 80px;
+	height: 80px;
+	padding: 12px 10px 10px 8px;
+	border: 1px solid #f9f9f9;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgba(255,255,255,0.9);
+	-moz-box-shadow:    1px 1px 5px 1px #e2dbe3;
+	-webkit-box-shadow: 1px 1px 5px 1px #e2dbe3;
+	box-shadow:         1px 1px 5px 1px #e2dbe3;	
+}
+
+.dateBox{
+	position: relative;
+	width: 60px;
+	height: 60px;
+}
+.dBoxD{
+	position: absolute;
+	top: 0px;
+	right: 2px;
+	width: 40px;
+	height: 40px;
+	font-size: 42px;
+	text-align: right;
+}
+.dBoxM{
+	position: absolute;
+	top: 12px;
+	left: 10px;
+	width: 20px;
+	height: 40px;
+	font-size: 19px;
+	text-align: left;
+	text-transform: uppercase;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	color: #808080;
+}
+.dBoxY{
+	position: absolute;
+	font-size: 19px;
+	text-align: right;
+	bottom: 0;
+	right: 0;
+	width: 60px;
+	height: 20px;
+	color: #808080;
+}
+.row.fresh{
+	padding: 15px 25px 15px 0;
+	margin: 15px;
+}
+.uppercase{
+	text-transform: uppercase;
+	font-size: 14px;
+}
+.blueDot{
+	color: #d7e3f4;
+}
+.favicon{
+	background-repeat: repeat-x repeat-y;
+	width: 48px;
+	height: 48px;
+}
