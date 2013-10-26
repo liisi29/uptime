@@ -34,29 +34,33 @@
 					<ejs> } else { </ejs> 
 						<ejs> for (var x = 0; x < newest.length; x++){ </ejs>
 							<div class="row fresh">
-								<div class="large-2 columns large-offset-1">
-									<div class="row">
-										<div class="large-12 small-6 columns">
-											<img src="http://a.fsdn.com/sd/topics/<ejs>-newest[x].category[0]</ejs>_64.png" onerror="this.src='../img/slashdot_64.png'"/></p>
-										</div>
-										<div class="large-12 small-6 columns">
-												<div class="dateBox">
-													<div class="dBoxD">
-														<ejs> if (newest[x].date[0] < 10) { </ejs>
-															0<ejs>-newest[x].date[0]</ejs>
-														<ejs> } else {</ejs>
-															<ejs>-newest[x].date[0]</ejs>
-														<ejs> } </ejs>
-													</div>
-													<div class="dBoxM"><ejs>-newest[x].date[1][1]</ejs></div>
-													<div class="dBoxY"><ejs>-newest[x].date[2]</ejs></div>
-												</div>
-										</div>
-									</div>
+								<div class="large-3 small-10 columns large-offset-2 small-offset-2">
+										<p>	
+											
+											
+											<div>
+											<div class="dBoxBack">
+											<div class="dateBox">
+													
+														<div class="dBoxD">
+															<ejs> if (newest[x].date[0] < 10) { </ejs>
+																0<ejs>-newest[x].date[0]</ejs>
+															<ejs> } else {</ejs>
+																<ejs>-newest[x].date[0]</ejs>
+															<ejs> } </ejs>
+														</div>
+														<div class="dBoxM"><ejs>-newest[x].date[1][1]</ejs></div>
+														<div class="dBoxY"><ejs>-newest[x].date[2]</ejs></div>
+													</div></div>
+												<img src="<ejs>-newest[x].img</ejs>" onError="this.onerror=null;this.src='../img/EarthInHand.jpg';"/>
+											</div>
+											
+										</p>
+									
 									
 								</div>
 								
-								<div class="small-12 large-9 columns">
+								<div class="small-12 large-7 columns">
 									<h4><ejs>-newest[x].title</ejs></h4>
 									<p>
 										<ejs>-newest[x].description</ejs>
@@ -109,7 +113,7 @@
 									... 
 									<a href="<ejs>=marketing[x].link</ejs>"> Read more</a>
 								</p>
-								<div class="row">				
+								<div class="row uppercase">				
 									<div class="large-6 columns">
 										<p>
 											<ejs>=marketing[x].date[0]</ejs>. 
@@ -145,7 +149,7 @@
 									<ejs>-cloud[x].description</ejs>... 
 									<a href="<ejs>=cloud[x].link</ejs>"> Read more</a>
 								</p>
-								<div class="row">				
+								<div class="row uppercase">				
 									<div class="large-6 columns">
 										<p>
 											<ejs>=cloud[x].date[0]</ejs>. 
@@ -181,7 +185,8 @@
 							<div class="panel">
 								<div class="row ">
 									<div class="large-2 columns">
-										<img src="http://a.fsdn.com/sd/topics/<ejs>-newest[x].category[0]</ejs>_64.png" onerror="this.src='../img/slashdot_64.png'"/></p>
+										<div class="favicon" style="background-image: url(http://g.etfv.co/<ejs>-technology[x].link</ejs>)">
+									</div>
 									</div>
 									<div class="large-10 columns">								
 										<h5><ejs>-technology[x].title</ejs></h5>
@@ -202,9 +207,9 @@
 										<p>
 											<a href="<ejs>=technology[x].link</ejs>#comments"><ejs>=technology[x]['slash-comments']</ejs> 
 												<ejs>if(technology[x]['slash-comments'] < 1 || technology[x]['slash-comments'] > 1){</ejs>
-													comments: 
+													comments 
 												<ejs> } else { </ejs>
-													comment:
+													comment
 												<ejs> } </ejs>
 											</a>
 										</p>
@@ -230,7 +235,7 @@
 							<div class="panel">
 								<div class="row ">
 									<div class="large-2 columns">
-										<img src="http://a.fsdn.com/sd/topics/<ejs>-newest[x].category[0]</ejs>_64.png" onerror="this.src='../img/slashdot_64.png'"/></p>
+										<div class="favicon" style="background-image: url(http://g.etfv.co/<ejs>-technology[x].link</ejs>)">
 									</div>
 									<div class="large-10 columns">								
 										<h5><ejs>-gadget[x].title</ejs></h5>
@@ -271,51 +276,50 @@
 	<script>
 	
 	</script>
-  <script>
-  document.write('<script src=' +
-  ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
-  '.js><\/script>')
-  </script>
-  
+	<script>
+		document.write('<script src=' +
+		('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+		'.js><\/script>')
+	</script>  
 	<script src="../js/foundation.min.js"></script>
-  <!--
-  
-  <script src="../js/foundation/foundation.js"></script>
-  
-  <script src="../js/foundation/foundation.alerts.js"></script>
-  
-  <script src="../js/foundation/foundation.clearing.js"></script>
-  
-  <script src="../js/foundation/foundation.cookie.js"></script>
-  
-  <script src="../js/foundation/foundation.dropdown.js"></script>
-  
-  <script src="../js/foundation/foundation.forms.js"></script>
-  
-  <script src="../js/foundation/foundation.joyride.js"></script>
-  
-  <script src="../js/foundation/foundation.magellan.js"></script>
-  
-  <script src="../js/foundation/foundation.orbit.js"></script>
-  
-  <script src="../js/foundation/foundation.reveal.js"></script>
-  
-  <script src="../js/foundation/foundation.section.js"></script>
-  
-  <script src="../js/foundation/foundation.tooltips.js"></script>
-  
-  <script src="../js/foundation/foundation.topbar.js"></script>
-  
-  <script src="../js/foundation/foundation.interchange.js"></script>
-  
-  <script src="../js/foundation/foundation.placeholder.js"></script>
-  
-  <script src="../js/foundation/foundation.abide.js"></script>
-  
-  -->
-  
-  <script>
-    $(document).foundation();
-  </script>
+		<!--
+
+		<script src="../js/foundation/foundation.js"></script>
+
+		<script src="../js/foundation/foundation.alerts.js"></script>
+
+		<script src="../js/foundation/foundation.clearing.js"></script>
+
+		<script src="../js/foundation/foundation.cookie.js"></script>
+
+		<script src="../js/foundation/foundation.dropdown.js"></script>
+
+		<script src="../js/foundation/foundation.forms.js"></script>
+
+		<script src="../js/foundation/foundation.joyride.js"></script>
+
+		<script src="../js/foundation/foundation.magellan.js"></script>
+
+		<script src="../js/foundation/foundation.orbit.js"></script>
+
+		<script src="../js/foundation/foundation.reveal.js"></script>
+
+		<script src="../js/foundation/foundation.section.js"></script>
+
+		<script src="../js/foundation/foundation.tooltips.js"></script>
+
+		<script src="../js/foundation/foundation.topbar.js"></script>
+
+		<script src="../js/foundation/foundation.interchange.js"></script>
+
+		<script src="../js/foundation/foundation.placeholder.js"></script>
+
+		<script src="../js/foundation/foundation.abide.js"></script>
+
+		-->
+
+	<script>
+		$(document).foundation();
+	</script>
 </body>
 </html>
