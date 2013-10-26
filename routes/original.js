@@ -2,21 +2,20 @@ var data = require('../lib/data');
 
 module.exports = function(app) {
 	app.get('/', function(req, res) {
-		data.getData(1, function(err, newest, marketing, cloud, technology, gadget){
+		data.getData(1, function(err, finalData){
 			if (err) {
 				console.error(new Date() + ' ' + err);
 				// FIXME Saada üldisele vealehele.
 				res.send(500);
 			} else {
 				res.render('task.html', {
-					newest: newest, 
-					marketing: marketing, 
-					cloud: cloud, 
-					technology: technology, 
-					gadget: gadget
-				}); 
-				
+					newest: finalData.newest, 
+					marketing: finalData.marketing, 
+					cloud: finalData.cloud, 
+					technology: finalData.technology, 
+					gadget: finalData.gadget
+				});
 			}
 		});
 	});
-}
+};
