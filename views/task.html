@@ -5,15 +5,50 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Foundation 4</title>
+	<title>Homework</title>
 	<link rel="stylesheet" href="../css/foundation.css">
 	<link rel="stylesheet" href="../css/override.css">
 	<script src="js/vendor/custom.modernizr.js"></script>
-	
-
 </head>
 <body>
+	<nav class="top-bar">
+	  <ul class="title-area">
+		<!-- Title Area -->
+		<li class="name">
+		  <span class="homeLabel">
+			  <h1>
+				<a href="/">Homework</a>
+			  </h1>
+		  </span>
+		</li>
+		<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		<li class="toggle-topbar menu-icon"><a href="/"><span>Menu</span></a></li>
+	  </ul>
 
+	  <section class="top-bar-section">	   
+		<!-- Right Nav Section -->
+		<ul class="right">
+			<li class="divider hide-for-small"></li>
+			<li class="active">
+				<a href="/">
+					<span data-tooltip class="has-tip" title="Posts are taken from url sent by e-mail">
+						Original data
+					</span>
+				</a>
+			</li>
+			<li class="divider hide-for-small"></li>
+			<li class="active">
+				<a href="/different">
+					<span data-tooltip class="has-tip" title="Posts are taken from filtered by category and date">
+						Custom data
+					</span>
+				</a>
+			</li>
+			<li class="divider hide-for-small"></li>
+		</ul>
+	  </section>
+	</nav>
+	<div class="dots"></div>
 	<!-- First row -->
 	<div class="row">
 		<div class="small-12 columns">			
@@ -27,29 +62,28 @@
 					<ejs> } else { </ejs> 
 						<ejs> for (var x = 0; x < newest.length; x++){ </ejs>
 							<div class="row fresh">
-								<div class="large-3 small-10 columns large-offset-2 small-offset-2">
+								<div class="small-10 large-2 columns large-offset-1 small-offset-2">
 									<div>	
 										<div>
 											<div class="dBoxBack">
 												<div class="dateBox">
 													<div class="dBoxD">
 														<ejs> if (newest[x].date[0] < 10) { </ejs>
-															0<ejs>-newest[x].date[0]</ejs>
+															0<ejs>=newest[x].date[0]</ejs>
 														<ejs> } else {</ejs>
-															<ejs>-newest[x].date[0]</ejs>
+															<ejs>=newest[x].date[0]</ejs>
 														<ejs> } </ejs>
 													</div>
-													<div class="dBoxM"><ejs>-newest[x].date[1][1]</ejs></div>
-													<div class="dBoxY"><ejs>-newest[x].date[2]</ejs></div>
+													<div class="dBoxM"><ejs>=newest[x].date[1][1]</ejs></div>
+													<div class="dBoxY"><ejs>=newest[x].date[2]</ejs></div>
 												</div>
 											</div>
 											<img src="<ejs>-newest[x].img</ejs>" alt="First image in article" onError="this.onerror=null;this.src='../img/EarthInHand.jpg';"/>
 										</div>
-										
 									</div>
 								</div>
 								
-								<div class="small-12 large-7 columns">
+								<div class="small-12 large-7 columns large-offset-2">
 									<h4><ejs>-newest[x].title</ejs></h4>
 									<p>
 										<ejs>-newest[x].description</ejs>
@@ -79,8 +113,7 @@
 				</div>
 			</div>
 		</div>
-	</div>	
-
+	</div>
 	
 	<hr />
 	
@@ -106,7 +139,7 @@
 									<div class="large-6 columns">
 										<p>
 											<ejs>=marketing[x].date[0]</ejs>. 
-											<ejs>-marketing[x].date[1][0]</ejs> 
+											<ejs>=marketing[x].date[1][0]</ejs> 
 										</p>
 									</div>
 									<div class="large-6 columns">
@@ -142,7 +175,7 @@
 									<div class="large-6 columns">
 										<p>
 											<ejs>=cloud[x].date[0]</ejs>. 
-											<ejs>-cloud[x].date[1][0]</ejs> 
+											<ejs>=cloud[x].date[1][0]</ejs> 
 										</p>
 									</div>
 									<div class="large-6 columns">
@@ -152,12 +185,14 @@
 									</div>
 								</div>
 							</div>
+							
 						<ejs> } </ejs>	
 					<ejs> } </ejs> 
 				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
+	
 	<hr />
 	
 	<!-- Third row -->
@@ -174,8 +209,7 @@
 							<div class="panel">
 								<div class="row ">
 									<div class="large-2 columns">
-										<div class="favicon" style="background-image: url(http://g.etfv.co/<ejs>-technology[x].link</ejs>)">
-									</div>
+										<div class="favicon" style="background-image: url(http://g.etfv.co/<ejs>-technology[x].link</ejs>)"></div>
 									</div>
 									<div class="large-10 columns">								
 										<h5><ejs>-technology[x].title</ejs></h5>
@@ -189,7 +223,7 @@
 									<div class="large-6 columns">
 										<p>
 											<ejs>=technology[x].date[0]</ejs>. 
-											<ejs>-technology[x].date[1][0]</ejs> 
+											<ejs>=technology[x].date[1][0]</ejs> 
 										</p>
 									</div>
 									<div class="large-6 columns">
@@ -224,7 +258,7 @@
 							<div class="panel">
 								<div class="row ">
 									<div class="large-2 columns">
-										<div class="favicon" style="background-image: url(http://g.etfv.co/<ejs>-technology[x].link</ejs>)">
+										<div class="favicon" style="background-image: url(http://g.etfv.co/<ejs>-technology[x].link</ejs>)"></div>
 									</div>
 									<div class="large-10 columns">								
 										<h5><ejs>-gadget[x].title</ejs></h5>
@@ -238,7 +272,7 @@
 									<div class="large-6 columns">
 										<p>
 											<ejs>=gadget[x].date[0]</ejs>. 
-											<ejs>-gadget[x].date[1][0]</ejs> 
+											<ejs>=gadget[x].date[1][0]</ejs> 
 										</p>
 									</div>
 									<div class="large-6 columns">
@@ -263,14 +297,12 @@
 	</div>
 	
 	<script>
-	
-	</script>
-	<script>
 		document.write('<script src=' +
 		('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
 		'.js><\/script>')
 	</script>  
 	<script src="../js/foundation.min.js"></script>
+	<script src="../js/foundation/foundation.tooltips.js"></script>
 		<!--
 
 		<script src="../js/foundation/foundation.js"></script>
