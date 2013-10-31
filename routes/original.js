@@ -23,10 +23,11 @@ module.exports = function(app) {
 		
 	
 	// displays single posts
-	app.get('/:link', function(req, res) {		
-		var link = req.params.link;
-		link = base64.decode('link');
-		console.log(link);
+	app.get('/:link', function(req, res) {
+		var link = req.params.link;	
+		console.log('link1: ' + link);	
+		var q = base64.decode(link);
+		console.log('link2: ' + q);
 		//moodul kus on eraldi funktsioon andmete andmebaasist võtmiseks
 		// funktsiooni v2lja kutsumine (defineeritakse public.js-s)
 		readability.showPost(link, function(err, post) {			
