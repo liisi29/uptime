@@ -1,4 +1,6 @@
 var data = require('../lib/data');
+var readability = require('../lib/readability');
+var base64 = require('js-base64').Base64;
 
 module.exports = function(app) {
 	app.get('/', function(req, res) {
@@ -17,5 +19,26 @@ module.exports = function(app) {
 				});
 			}
 		});
+	});
+		
+	
+	// displays single posts
+	app.get('/:link', function(req, res) {		
+		var link = req.params.link;
+		link = base64.decode('link');
+		console.log(link);
+		//moodul kus on eraldi funktsioon andmete andmebaasist võtmiseks
+		// funktsiooni v2lja kutsumine (defineeritakse public.js-s)
+		readability.showPost(link, function(err, post) {			
+			if (err) {
+				// Error
+				console.error(err);
+				res.send(500);
+			} else {
+				console.log(post);
+			}			
+		});
+		
+		
 	});
 };

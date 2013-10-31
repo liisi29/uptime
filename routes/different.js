@@ -1,11 +1,12 @@
 var data = require('../lib/data');
 
 module.exports = function(app) {
+	// in http://something/different triggers this app.get
 	app.get('/different', function(req, res) {
 		data.getData(0, function(err, finalData){
 			if (err) {
 				console.error(new Date() + ' ' + err);
-				// FIXME Saada üldisele vealehele.
+				// sends to general error page
 				res.send(500);
 			} else {
 				res.render('task.html', {
@@ -19,3 +20,4 @@ module.exports = function(app) {
 		});
 	});
 };
+
