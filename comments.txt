@@ -1,0 +1,17 @@
+package.json:
+	"dependencies": {
+			"express": "3.4.2",
+			"ejs": "*",
+			"commander": "*",
+			"async": "*",
+			"request": "2.27.0",
+			"js-base64": "2.1.2"
+		}
+		
+	number (ex: "3.4.2") - number of version (you can find it from: node_modules -> <package> -> package.json -> version)
+	"*" 				 - this means that all versions will do and the latest will be installed while installing..
+
+	npm shrinkwrap 		 - makes the the file with installed versions. use this when you want to fix the versions
+
+	if you plan to continue developing the application - use the "*" in dependencies
+	if no further development is planned - use the specific versions
