@@ -26,7 +26,6 @@ module.exports = function(app) {
 	app.get('/post/:link', function(req, res) {
 		var link = req.params.link;		
 		link = base64.decode(link);
-		console.log(link);
 		//moodul kus on eraldi funktsioon andmete andmebaasist võtmiseks
 		// funktsiooni v2lja kutsumine (defineeritakse public.js-s)
 		readability.showPost(link, function(err, post) {			
@@ -39,11 +38,10 @@ module.exports = function(app) {
 					author: post.author,
 					title: post.title,
 					content: post.content,
-					date: post.date
+					date: post.date,
+					link: post.link
 				});
 			}			
-		});
-		
-		
+		});		
 	});
 };
