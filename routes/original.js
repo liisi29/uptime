@@ -23,7 +23,7 @@ module.exports = function(app) {
 		
 	
 	// displays single posts
-	app.get('/:link', function(req, res) {
+	app.get('/different/:link', function(req, res) {
 		var link = req.params.link;		
 		link = base64.decode(link);
 		//moodul kus on eraldi funktsioon andmete andmebaasist võtmiseks
@@ -34,7 +34,13 @@ module.exports = function(app) {
 				console.error(err);
 				res.send(500);
 			} else {
-				console.log(post);
+				res.render('page.html', {
+					author: post.author,
+					title: post.title,
+					content: post.content,
+					date: post.date,
+					image: post.image
+				});
 			}			
 		});
 		

@@ -5,7 +5,7 @@ body{
 hr {
 	border: none;
 }
-img {
+img.freshIMG {
 	max-width: 200px;
 	height: auto;
 	border: 1px solid #f9f9f9;
