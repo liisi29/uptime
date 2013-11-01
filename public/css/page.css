@@ -1,0 +1,25 @@
+img {
+	min-width: auto;
+	max-width: auto;
+	height: auto;
+}
+h2{
+	margin-top: 30px;
+	padding: 50px 0 70px 0;
+	border-top: 1px solid #e7e7e7;
+	color: #22002b;
+}
+.panel h2{
+	color: #513758;
+}
+.page-content{
+	line-height: 2em;
+	text-align: justify;
+	padding: 20px;
+}
+.grey{
+	color: #D6D6D9;
+}
+.smaller{
+	font-size: 0.8em;
+}

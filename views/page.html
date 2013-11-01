@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Homework</title>
+	<link rel="stylesheet" href="../css/foundation.css">
+	<link rel="stylesheet" href="../css/override.css">
+	<link rel="stylesheet" href="../css/page.css">
+	<script src="js/vendor/custom.modernizr.js"></script>
+</head>
+<body>
+	<nav class="top-bar">
+	  <ul class="title-area">
+		<!-- Title Area -->
+		<li class="name">
+		  <div class="homeLabel">
+			  <h1>
+				<a href="/">Homework</a>
+			  </h1>
+		  </div>
+		</li>
+		<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+		<li class="toggle-topbar menu-icon"><a href="/"><span>Menu</span></a></li>
+	  </ul>
+
+	  <section class="top-bar-section">	   
+		<!-- Right Nav Section -->
+		<ul class="right">
+			<li class="divider hide-for-small"></li>
+			<li class="active">
+				<a href="/">
+					<span data-tooltip class="has-tip" title="Posts are taken from url sent by e-mail">
+						Original data
+					</span>
+				</a>
+			</li>
+			<li class="divider hide-for-small"></li>
+			<li class="active">
+				<a href="/different">
+					<span data-tooltip class="has-tip" title="Posts are taken from different urls filtered by category and date">
+						Custom data
+					</span>
+				</a>
+			</li>
+			<li class="divider hide-for-small"></li>
+		</ul>
+	  </section>
+	</nav>
+	<div class="dots"></div>
+	<!-- First row -->
+	<div class="row">
+		<div class="small-12 columns">			
+			<div class="panel">
+				<div class="left smaller grey">
+					<ejs>=date</ejs> 
+					&bull; 
+					<a href="<ejs>=link</ejs>"> original</a>
+				</div>
+				<div class="right smaller grey">
+				Author: <ejs>=author</ejs>
+				</div>
+				<h2><ejs>=title</ejs></h2>
+				
+				<div class="page-content">
+					<ejs>-content</ejs>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+		document.write('<script src=' +
+		('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+		'.js><\/script>')
+	</script>  
+	<script src="../js/foundation.min.js"></script>
+	<script src="../js/foundation/foundation.tooltips.js"></script>
+		<!--
+
+		<script src="../js/foundation/foundation.js"></script>
+
+		<script src="../js/foundation/foundation.alerts.js"></script>
+
+		<script src="../js/foundation/foundation.clearing.js"></script>
+
+		<script src="../js/foundation/foundation.cookie.js"></script>
+
+		<script src="../js/foundation/foundation.dropdown.js"></script>
+
+		<script src="../js/foundation/foundation.forms.js"></script>
+
+		<script src="../js/foundation/foundation.joyride.js"></script>
+
+		<script src="../js/foundation/foundation.magellan.js"></script>
+
+		<script src="../js/foundation/foundation.orbit.js"></script>
+
+		<script src="../js/foundation/foundation.reveal.js"></script>
+
+		<script src="../js/foundation/foundation.section.js"></script>
+
+		<script src="../js/foundation/foundation.tooltips.js"></script>
+
+		<script src="../js/foundation/foundation.topbar.js"></script>
+
+		<script src="../js/foundation/foundation.interchange.js"></script>
+
+		<script src="../js/foundation/foundation.placeholder.js"></script>
+
+		<script src="../js/foundation/foundation.abide.js"></script>
+
+		-->
+
+	<script>
+		$(document).foundation();
+	</script>
+</body>
+</html>
