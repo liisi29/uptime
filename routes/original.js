@@ -1,6 +1,5 @@
 var data = require('../lib/data');
 var readability = require('../lib/readability');
-var base64 = require('js-base64').Base64;
 
 module.exports = function(app) {
 	app.get('/', function(req, res) {
@@ -24,7 +23,7 @@ module.exports = function(app) {
 	// displays single posts
 	app.get('/post/:link', function(req, res) {
 		var link = req.params.link;			
-		link = base64.decode(link);
+		
 		readability.showPost(link, function(err, post) {
 			if (err) {
 				// Error
@@ -37,10 +36,11 @@ module.exports = function(app) {
 					content: post.content,
 					date: post.date,
 					link: post.link,
-					allLinks: post.allLinks
+					next: post.next,
+					prev: post.prev
+					
 				});
 			}
 		});
 	});
-};
-	
+}	

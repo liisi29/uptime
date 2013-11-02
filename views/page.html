@@ -10,9 +10,7 @@
 	<link rel="stylesheet" href="../css/override.css">
 	<link rel="stylesheet" href="../css/page.css">
 	<script src="../js/vendor/custom.modernizr.js"></script>
-	<script>
-		var allLinks = '<ejs>=allLinks</ejs>';
-	</script>
+
 </head>
 <body>
 	<nav class="top-bar">
@@ -59,12 +57,12 @@
 	<div class="row">
 		<div class="small-12 columns">			
 			<div class="panel pagePanel">
-				<a href="" id="prevLink" class="prev left navButton navTip">
+				<a href="/post/<ejs>=prev</ejs>" id="prevLink" class="prev left navButton navTip">
 					<div class="arrow aprev">&#8678;</div>
 					<span>Previous post</span>
 				</a>
 			
-				<a href="" id="nextLink" class="next right navButton navTip">
+				<a href="/post/<ejs>=next</ejs>" id="nextLink" class="next right navButton navTip">
 					<div class="arrow anext">&#8680;</div>
 					<span>Next post</span>
 				</a>
@@ -92,7 +90,6 @@
 		('__proto__' in {} ? '../js/vendor/zepto' : '../js/vendor/jquery') +
 		'.js><\/script>')
 	</script>  
-	<script src="../js/page.js"></script>
 	<script src="../js/foundation.min.js"></script>
 	<script src="../js/foundation/foundation.tooltips.js"></script>
 		<!--
