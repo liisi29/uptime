@@ -12,6 +12,9 @@ h2{
 .panel h2{
 	color: #513758;
 }
+.pagePanel{
+	padding-top: 30px;
+}
 .page-content{
 	line-height: 2em;
 	text-align: justify;
@@ -22,4 +25,149 @@ h2{
 }
 .smaller{
 	font-size: 0.8em;
+	padding: 0 50px;
 }
+.navButton{
+	height: 45px;
+	width: 45px;
+	position: absolute;
+	top: 7px;
+	overflow: visible;
+	border: 1px solid #d4d4d4;
+	text-decoration: none;
+	text-shadow: 1px 1px 0 #fff;
+	font: 11px/normal sans-serif;
+	color: #333;
+	cursor: pointer;
+	background-color: #ececec;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+	background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+	background-image: -o-linear-gradient(#f4f4f4, #ececec);
+	background-image: linear-gradient(#f4f4f4, #ececec);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+.arrow{
+	position: absolute;
+	top: 0;
+	color: #D6D6D9;
+	font-size: 3.5em;
+	height: 45px;
+	width: 45px;
+}
+.arrow:hover{
+	color: #fff;
+}
+.navButton:hover{
+	border-color: #3072b3;
+	border-bottom-color: #2a65a0;
+	text-decoration: none;
+/*	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);*/
+	color: #fff;
+	background-color: #3072b3;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+	background-image: -moz-linear-gradient(#599bdc, #3072b3);
+	background-image: -o-linear-gradient(#599bdc, #3072b3);
+	background-image: linear-gradient(#599bdc, #3072b3);
+}
+.navButton:focus,
+.navButton:active{
+	border-color: #b53f3a;
+	border-bottom-color: #a0302a;
+	color: #fff;
+	background-color: #dc5f59;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dc5f59), to(#b33630));
+	background-image: -moz-linear-gradient(#dc5f59, #b33630);
+	background-image: -o-linear-gradient(#dc5f59, #b33630);
+	background-image: linear-gradient(#dc5f59, #b33630);
+}
+
+.anext{
+	top: -2px;
+	right: -6px;
+}
+.aprev{
+	top: -2px;
+	left: 2px;
+}
+.next{
+	right: 25px;
+}
+.prev{
+	left: 25px;
+}
+
+a.navTip {
+	outline:none;
+	text-decoration:none;
+}
+
+a.navTip > span{
+	padding: 10px;
+	margin-top: -20px;
+	margin-left: 48px;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 10;	   
+	position: absolute; 
+	width: 130px;
+	
+	font-size: 14px;
+			
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;	
+	
+	-webkit-box-shadow: 2px 2px 2px #e2dbe3;
+	-moz-box-shadow: 2px 2px 2px #e2dbe3;		
+	box-shadow: 2px 2px 2px #e2dbe3;	    
+	
+	-webkit-transition-property:opacity, margin-top, visibility, margin-left;
+	-webkit-transition-duration:0.4s, 0.3s, 0.4s, 0.3s;  
+	-webkit-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+
+	-moz-transition-property:opacity, margin-top, visibility, margin-left;
+	-moz-transition-duration:0.4s, 0.3s, 0.4s, 0.3s;  
+	-moz-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+
+	-o-transition-property:opacity, margin-top, visibility, margin-left;
+	-o-transition-duration:0.4s, 0.3s, 0.4s, 0.3s;  
+	-o-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+
+	transition-property:opacity, margin-top, visibility, margin-left;
+	transition-duration:0.4s, 0.3s, 0.4s, 0.3s;  
+	transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
+}
+
+
+a.navTip.next > span {
+	margin-left: -135px;
+}
+
+
+/*a.navTip > span:hover,*/
+/* http://stackoverflow.com/questions/3225891/what-does-the-greater-than-sign-css-selector-mean */
+a.navTip:hover > span{
+	opacity: 1;
+	text-decoration:none;
+	visibility: visible;
+	overflow: visible;
+	margin-top:50px;
+	display: inline;
+	margin-top: 20px;
+}
+
+a.navTip > span {
+	color: #3072bf; 
+
+	background-color: #ececec;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+	background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+	background-image: -o-linear-gradient(#f4f4f4, #ececec);
+	background-image: linear-gradient(#f4f4f4, #ececec);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ececec',GradientType=0 );
+	    
+	border: 1px solid #3072bf;	     
+}  
