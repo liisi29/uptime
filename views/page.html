@@ -10,6 +10,9 @@
 	<link rel="stylesheet" href="../css/override.css">
 	<link rel="stylesheet" href="../css/page.css">
 	<script src="../js/vendor/custom.modernizr.js"></script>
+	<script>
+		var allLinks = '<ejs>=allLinks</ejs>';
+	</script>
 </head>
 <body>
 	<nav class="top-bar">
@@ -28,6 +31,7 @@
 
 		<section class="top-bar-section">	   
 			<!-- Right Nav Section -->
+		
 			<ul class="right">
 				<li class="divider hide-for-small"></li>
 				<li class="active">
@@ -51,6 +55,8 @@
 	</nav>
 	<div class="dots"></div>
 	<!-- First row -->
+		<a href="" id="nextLink">Next</a>
+		<a href="" id="prevLink">Prev</a>
 	<div class="row">
 		<div class="small-12 columns">			
 			<div class="panel">
@@ -76,6 +82,7 @@
 		('__proto__' in {} ? '../js/vendor/zepto' : '../js/vendor/jquery') +
 		'.js><\/script>')
 	</script>  
+	<script src="../js/page.js"></script>
 	<script src="../js/foundation.min.js"></script>
 	<script src="../js/foundation/foundation.tooltips.js"></script>
 		<!--
