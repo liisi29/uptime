@@ -14,11 +14,14 @@ h2{
 }
 .pagePanel{
 	padding-top: 30px;
+	padding-bottom: 60px;
+	margin-bottom: 50px;
 }
 .page-content{
 	line-height: 2em;
 	text-align: justify;
-	padding: 20px;
+	padding: 20px 40px 60px;
+	border-bottom: 1px solid #e7e7e7;
 }
 .grey{
 	color: #D6D6D9;
@@ -31,7 +34,6 @@ h2{
 	height: 45px;
 	width: 45px;
 	position: absolute;
-	top: 7px;
 	overflow: visible;
 	border: 1px solid #d4d4d4;
 	text-decoration: none;
@@ -47,6 +49,12 @@ h2{
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
+}
+.nbTop{
+	top: 7px;
+}
+.nbBottom{
+	bottom: 56px;
 }
 .arrow{
 	position: absolute;
@@ -105,9 +113,10 @@ a.navTip {
 	text-decoration:none;
 }
 
+/* http://stackoverflow.com/questions/3225891/what-does-the-greater-than-sign-css-selector-mean */
+
 a.navTip > span{
-	padding: 10px;
-	margin-top: -20px;
+	padding: 10px;	
 	margin-left: 48px;
 	opacity: 0;
 	visibility: hidden;
@@ -116,53 +125,14 @@ a.navTip > span{
 	width: 130px;
 	
 	font-size: 14px;
+	color: #3072bf; 
+	color: #3072bf; 
 			
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-o-border-radius: 3px;
 	border-radius: 3px;	
 	
-	-webkit-box-shadow: 2px 2px 2px #e2dbe3;
-	-moz-box-shadow: 2px 2px 2px #e2dbe3;		
-	box-shadow: 2px 2px 2px #e2dbe3;	    
-	
-	-webkit-transition-property:opacity, margin-top, visibility, margin-left;
-	-webkit-transition-duration:0.4s, 0.3s, 0.4s, 0.3s;  
-	-webkit-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
-
-	-moz-transition-property:opacity, margin-top, visibility, margin-left;
-	-moz-transition-duration:0.4s, 0.3s, 0.4s, 0.3s;  
-	-moz-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
-
-	-o-transition-property:opacity, margin-top, visibility, margin-left;
-	-o-transition-duration:0.4s, 0.3s, 0.4s, 0.3s;  
-	-o-transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
-
-	transition-property:opacity, margin-top, visibility, margin-left;
-	transition-duration:0.4s, 0.3s, 0.4s, 0.3s;  
-	transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
-}
-
-
-a.navTip.next > span {
-	margin-left: -135px;
-}
-
-
-/*a.navTip > span:hover,*/
-/* http://stackoverflow.com/questions/3225891/what-does-the-greater-than-sign-css-selector-mean */
-a.navTip:hover > span{
-	opacity: 1;
-	text-decoration:none;
-	visibility: visible;
-	overflow: visible;
-	margin-top:50px;
-	display: inline;
-	margin-top: 20px;
-}
-
-a.navTip > span {
-	color: #3072bf; 
 
 	background-color: #ececec;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
@@ -171,5 +141,64 @@ a.navTip > span {
 	background-image: linear-gradient(#f4f4f4, #ececec);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#ececec',GradientType=0 );
 	    
-	border: 1px solid #3072bf;	     
-}  
+	border: 1px solid #3072bf;	    
+	
+	-webkit-box-shadow: 2px 2px 2px #e2dbe3;
+	-moz-box-shadow: 2px 2px 2px #e2dbe3;		
+	box-shadow: 2px 2px 2px #e2dbe3;	    
+	
+	-webkit-transition-property:opacity, visibility;
+	-webkit-transition-duration: 0.4s 0.4s;  
+	-webkit-transition-timing-function: ease-in-out, ease-in-out;
+
+	-moz-transition-property: opacity, visibility;
+	-moz-transition-duration: 0.4s 0.4s;  
+	-moz-transition-timing-function: ease-in-out, ease-in-out;
+
+	-o-transition-property: opacity, visibility;
+	-o-transition-duration: 0.4s 0.4s;  
+	-o-transition-timing-function: ease-in-out, ease-in-out;
+
+	transition-property: opacity, visibility;
+	transition-duration: 0.4s 0.4s;  
+	transition-timing-function: ease-in-out, ease-in-out;
+}
+a.navTip:hover > span{
+	opacity: 1;
+	text-decoration:none;
+	visibility: visible;
+	overflow: visible;
+	margin-top:50px;
+	display: inline;
+	margin-top: 20px;
+} 
+
+a.ntTop > span{
+	margin-top: -20px;	
+	-webkit-transition: margin-top 0.3s ease-in-out;
+	-moz-transition: margin-top 0.3s ease-in-out;
+	-o-transition: margin-top 0.3s ease-in-out;
+	transition: margin-top 0.3s ease-in-out;
+}
+a.ntTop :hover > span{
+	margin-top: 20px;
+}
+
+a.ntBottom > span{
+	margin-top: 70px;	
+	-webkit-transition: margin-top 0.3s ease-in-out;
+	-moz-transition: margin-top 0.3s ease-in-out;
+	-o-transition: margin-top 0.3s ease-in-out;
+	transition: margin-top 0.3s ease-in-out;
+}
+a.ntBottom :hover > span{
+	margin-top: 0px;
+}
+
+
+a.navTip.next > span {
+	margin-left: -135px;
+}
+
+
+
