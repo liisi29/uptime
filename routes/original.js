@@ -20,7 +20,6 @@ module.exports = function(app) {
 			}
 		});
 	});
-		
 	
 	// displays single posts
 	app.get('/post/:link', function(req, res) {
