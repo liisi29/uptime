@@ -131,8 +131,7 @@ a.navTip > span{
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-o-border-radius: 3px;
-	border-radius: 3px;	
-	
+	border-radius: 3px;		
 
 	background-color: #ececec;
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
@@ -171,8 +170,7 @@ a.navTip:hover > span{
 	margin-top:50px;
 	display: inline;
 	margin-top: 20px;
-} 
-
+}
 a.ntTop > span{
 	margin-top: -20px;	
 	-webkit-transition: margin-top 0.3s ease-in-out;
@@ -183,7 +181,6 @@ a.ntTop > span{
 a.ntTop :hover > span{
 	margin-top: 20px;
 }
-
 a.ntBottom > span{
 	margin-top: 70px;	
 	-webkit-transition: margin-top 0.3s ease-in-out;
@@ -194,11 +191,6 @@ a.ntBottom > span{
 a.ntBottom :hover > span{
 	margin-top: 0px;
 }
-
-
 a.navTip.next > span {
 	margin-left: -135px;
 }
-
-
-

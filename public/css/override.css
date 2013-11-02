@@ -52,8 +52,7 @@ a.has-tip:hover{
 	z-index: -1;
 }
 .homeLabel{
-	text-shadow: 
-		2px 2px 4px #22002b;
+	text-shadow: 2px 2px 4px #22002b;
 }
 
 h2.field{
@@ -92,7 +91,6 @@ h2.field{
 	-webkit-box-shadow: 1px 1px 5px 1px #e2dbe3;
 	box-shadow:         1px 1px 5px 1px #e2dbe3;	
 }
-
 .dateBox{
 	position: relative;
 	width: 60px;
